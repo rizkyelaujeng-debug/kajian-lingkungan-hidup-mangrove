@@ -1,0 +1,13 @@
+/* --- TEMA DARK MODE --- */
+        body.dark-mode { background-color: #0f172a; color: #f8fafc; }
+        body.dark-mode nav, 
+        body.dark-mode .bg-white, 
+        body.dark-mode .bg-gray-50 { background-color: #1e293b !important; border-color: #334155 !important; }
+        body.dark-mode .text-gray-900, 
+        body.dark-mode .text-gray-800 { color: #f8fafc !important; }
+        body.dark-mode .text-gray-500, 
+        body.dark-mode .text-gray-600 { color: #cbd5e1 !important; }
+        body.dark-mode input { background-color: #0f172a; color: white; border-color: #334155; }
+        body.dark-mode table thead { background-color: #334155; color: #e2e8f0; }
+        body.dark-mode .hover\:bg-gray-50\/50:hover { background-color: #334155 !important; }
+        body.dark-mode .leaflet-popup-content-wrapper { background-color: #1e293b; color: white; }
