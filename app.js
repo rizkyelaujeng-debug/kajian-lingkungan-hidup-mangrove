@@ -168,6 +168,36 @@ class SimanisApp {
         if(btnZoomMamboro) btnZoomMamboro.addEventListener('click', () => {
             if(this.map) this.map.flyTo([-0.810, 119.863], 15, { duration: 1.5 });
         });
+
+        // --- FITUR FILTER TABEL BERDASARKAN ZONA ---
+        const filterButtons = document.querySelectorAll('#tab-data button.rounded-full');
+        const tableRows = document.querySelectorAll('#tab-data tbody tr');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                // 1. Ubah styling tombol aktif & non-aktif
+                filterButtons.forEach(b => {
+                    b.classList.remove('bg-emerald-600', 'text-white');
+                    b.classList.add('bg-gray-50', 'text-gray-500', 'border', 'border-gray-200');
+                });
+                e.target.classList.remove('bg-gray-50', 'text-gray-500', 'border', 'border-gray-200');
+                e.target.classList.add('bg-emerald-600', 'text-white');
+
+                // 2. Ambil teks zona yang diklik
+                const selectedZone = e.target.textContent.trim().toLowerCase();
+
+                // 3. Filter baris tabel
+                tableRows.forEach(row => {
+                    const zoneCell = row.querySelector('td:nth-child(3)').textContent.trim().toLowerCase();
+                    
+                    if (selectedZone === 'semua zona' || zoneCell.includes(selectedZone.replace('muara s. palu', 'muara sungai palu'))) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+        });
     }
 
     // ==========================================
