@@ -1,13 +1,90 @@
-/* --- TEMA DARK MODE --- */
-        body.dark-mode { background-color: #0f172a; color: #f8fafc; }
-        body.dark-mode nav, 
-        body.dark-mode .bg-white, 
-        body.dark-mode .bg-gray-50 { background-color: #1e293b !important; border-color: #334155 !important; }
-        body.dark-mode .text-gray-900, 
-        body.dark-mode .text-gray-800 { color: #f8fafc !important; }
-        body.dark-mode .text-gray-500, 
-        body.dark-mode .text-gray-600 { color: #cbd5e1 !important; }
-        body.dark-mode input { background-color: #0f172a; color: white; border-color: #334155; }
-        body.dark-mode table thead { background-color: #334155; color: #e2e8f0; }
-        body.dark-mode .hover\:bg-gray-50\/50:hover { background-color: #334155 !important; }
-        body.dark-mode .leaflet-popup-content-wrapper { background-color: #1e293b; color: white; }
+/* Transisi Global agar perubahan mode gelap mulus */
+body, nav, div, input, button, table, th, td, span, p, h2, h3, h4, h5 { 
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; 
+}
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: #f8fafc; 
+}
+
+.nav-link.active { 
+    background-color: #ecfdf5; 
+    color: #059669; 
+    font-weight: 600; 
+}
+
+.leaflet-popup-content-wrapper { 
+    border-radius: 12px; 
+    padding: 5px; 
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* TEMA DARK MODE */
+body.dark-mode { 
+    background-color: #0f172a; 
+    color: #f8fafc; 
+}
+
+body.dark-mode nav, 
+body.dark-mode .bg-white, 
+body.dark-mode .bg-gray-50 { 
+    background-color: #1e293b !important; 
+    border-color: #334155 !important; 
+}
+
+body.dark-mode .text-gray-900, 
+body.dark-mode .text-gray-800,
+body.dark-mode .text-gray-700 { 
+    color: #f8fafc !important; 
+}
+
+body.dark-mode .text-gray-500, 
+body.dark-mode .text-gray-600 { 
+    color: #cbd5e1 !important; 
+}
+
+body.dark-mode input,
+body.dark-mode select { 
+    background-color: #0f172a !important; 
+    color: white !important; 
+    border-color: #334155 !important; 
+}
+
+body.dark-mode table thead { 
+    background-color: #334155 !important; 
+    color: #e2e8f0 !important; 
+}
+
+body.dark-mode .hover\:bg-gray-50\/50:hover { 
+    background-color: #334155 !important; 
+}
+
+body.dark-mode .leaflet-popup-content-wrapper { 
+    background-color: #1e293b; 
+    color: white; 
+}
+
+body.dark-mode #modalTambahBibitContent {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+}
+
+body.dark-mode .btn-filter {
+    border-color: #334155;
+}
